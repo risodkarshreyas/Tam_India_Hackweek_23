@@ -3,12 +3,16 @@
   "description": "TAM_India_Hackweek_Workflow - end to end workflow solution",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.Excel.Activities": "[2.20.2]",
-    "UiPath.Form.Activities": "[23.4.4]",
+    "UiPath.Form.Activities": "[23.4.3]",
+    "UiPath.FormActivityLibrary": "[2.0.5]",
     "UiPath.Mail.Activities": "[1.20.0]",
+    "UiPath.Studio.Forms.Runtime": "[23.4.4]",
     "UiPath.System.Activities": "[23.4.3]",
     "UiPath.Testing.Activities": "[23.4.1]",
-    "UiPath.UIAutomation.Activities": "[23.4.6]"
+    "UiPath.UIAutomation.Activities": "[23.4.6]",
+    "UiPath.WebAPI.Activities": "[1.9.2]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -19,7 +23,7 @@
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
-    "isAttended": false,
+    "isAttended": true,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
     "workflowSerialization": "DataContract",

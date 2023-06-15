@@ -1,0 +1,124 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExtractUsingAPIs" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="854,592.6666666666666" sap2010:WorkflowViewState.IdRef="ExtractUsingAPIs_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ExtractUsingAPIs" sap:VirtualizedContainerService.HintSize="450,528" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strJsonResp" />
+      <Variable x:TypeArguments="x:Int32" Name="strStatusCode_Authenticate" />
+      <Variable x:TypeArguments="x:String" Name="strJsonResp_Authenticate" />
+      <Variable x:TypeArguments="x:Int32" Name="Response" />
+      <Variable x:TypeArguments="x:String" Name="RespContent" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" Body="[string.Format(&quot;{{{0}    &quot;&quot;password&quot;&quot;: &quot;&quot;UiPath#12345&quot;&quot;,{1}    &quot;&quot;usernameOrEmailAddress&quot;&quot;: &quot;&quot;admin&quot;&quot;,{2}    &quot;&quot;tenancyName&quot;&quot;: &quot;&quot;demo&quot;&quot;   {3}}}&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]" BodyFormat="application/JSON" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://laptop-2ueu0kdi/api/Account/Authenticate" sap:VirtualizedContainerService.HintSize="388,196.66666666666666" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[RespContent]" StatusCode="[Response]" TimeoutMS="6000">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="X-UIPATH-TenantName">demo</InArgument>
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:OrchestratorHttpRequest ResponseHeaders="{x:Null}" StatusCode="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Orchestrator HTTP Request" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="OrchestratorHttpRequest_2" JSONPayload="[string.Format(&quot;{{{0}    &quot;&quot;grant_type&quot;&quot;: &quot;&quot;refresh_token&quot;&quot;,{1}    &quot;&quot;client_id&quot;&quot;: &quot;&quot;0944f679-20f9-42df-9acf-750e7409ea34&quot;&quot;,{2}    &quot;&quot;refresh_token&quot;&quot;: &quot;&quot;XAP*C(bhnLlB0LOu&quot;&quot;{3}}}&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]" Method="POST" RelativeEndpoint="[string.Format(&quot;&quot;&quot;https://cloud.uipath.com/identity_/connect/authorize&quot;&quot;&quot;)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:OrchestratorHttpRequest>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Response.tostring]" />
+  </Sequence>
+</Activity>
