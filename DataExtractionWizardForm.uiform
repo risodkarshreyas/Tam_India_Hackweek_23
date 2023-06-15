@@ -27,13 +27,33 @@
                 "type": "textfield",
                 "input": true,
                 "defaultValue": "Data Source=<InstanceName>;Initial Catalog=<DatabaseName>;Persist Security Info=True;User ID=<userid>;Password=<Password>;Encrypt=False"
+              },
+              {
+                "label": "Extract_Utilization_Data",
+                "showValidations": false,
+                "disableOnInvalid": true,
+                "tableView": false,
+                "key": "submit",
+                "type": "button",
+                "input": true,
+                "saveOnEnter": false
               }
             ]
           },
           {
             "label": "Extract using APIs",
             "key": "extractUsingApIs",
-            "components": []
+            "components": [
+              {
+                "label": "Extract Data Using APIs",
+                "action": "event",
+                "showValidations": false,
+                "tableView": false,
+                "key": "extractDataUsingApIs",
+                "type": "button",
+                "input": true
+              }
+            ]
           },
           {
             "label": "Upload CSV manually",
@@ -46,16 +66,6 @@
         "input": false,
         "tableView": false,
         "label": "Tabs"
-      },
-      {
-        "label": "Extract_Utilization_Data",
-        "showValidations": false,
-        "disableOnInvalid": true,
-        "tableView": false,
-        "key": "submit",
-        "type": "button",
-        "input": true,
-        "saveOnEnter": false
       }
     ]
   }

@@ -1,0 +1,161 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetFoldersData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_accessToken" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>562,1302.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GetFoldersData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetFoldersData" sap:VirtualizedContainerService.HintSize="572,1238" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="GetFoldersResponseContent" />
+      <Variable x:TypeArguments="x:Int32" Name="GetFolderResponseCode" />
+      <Variable x:TypeArguments="x:String" Name="GetFolderToken" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetToken.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="510,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetToken\GetToken.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InOutArgument x:TypeArguments="x:String" x:Key="out_accessToken" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <If Condition="[string.IsNullOrEmpty(out_accessToken)]" sap:VirtualizedContainerService.HintSize="510,356.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="476,172.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[out_accessToken]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">["Bearer"+"eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ1MDVCMzJBNUNDNTY4MkMyQTMxNTgyREFEQkY1RTE3OTA1NjgyQjAiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJSUVd6S2x6RmFDd3FNVmd0cmI5ZUY1QldnckEifQ.eyJuYmYiOjE2ODY4NTIzMDQsImV4cCI6MTY4Njg1NjIwNCwiaXNzIjoiaHR0cHM6Ly9sYXB0b3AtMnVldTBrZGkvaWRlbnRpdHkiLCJhdWQiOlsiSWRlbnRpdHlTZXJ2ZXJBcGkiLCJPcmNoZXN0cmF0b3JBcGlVc2VyQWNjZXNzIl0sImNsaWVudF9pZCI6IjRkN2YyYmYyLTkwOTMtNDk1OS05ZDUyLWI0YTY2MGYxNDg1ZiIsInN1YiI6IjIwNmIxOTk1LTllOWItNGUyNy04NGM5LWUzY2RhYzdhMGIxYSIsImF1dGhfdGltZSI6MTY4Njg1MjYwNCwiaWRwIjoibG9jYWwiLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6IkFFTTRNSDM1V0tTM1NMSFdGM0hSS1VTSDZUNEpFM1RZIiwicHJ0X2lkIjoiZWMxZjA1NzYtZWJlZi00YjE2LTk0N2UtN2RhNGFmMDg0MDJjIiwiaG9zdCI6IkZhbHNlIiwiZmlyc3RfbmFtZSI6IiIsImxhc3RfbmFtZSI6IiIsInBydF9hZG0iOiJUcnVlIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4iLCJuYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJlbWFpbCIsIm9wZW5pZCIsInByb2ZpbGUiLCJ0ZW5hbnQiLCJJZGVudGl0eVNlcnZlckFwaSIsIk9yY2hlc3RyYXRvckFwaVVzZXJBY2Nlc3MiXSwiYW1yIjpbInB3ZCJdfQ.iTgF0_Wz5iz3GXpIe-eiZocVfNj6xAv41msy4t4DnB-RHym_d9ngljOu-KjL3KltqusUfovsv9INSlvLH96vF6ZzdMxMrl6WDERXNWUfTIgYwZg57Mq1AqFDmptcIbT9qka9Ygeg3pVc_3nBWUYpy2UiwgTbUp08KO31_sKJbW3UAOYCa_kV-hTx21ZZM2r8j8_fsrKW1pZ0g_TmYyrCizohZavivfj-EOCeruJOsBnGUoUhvDGzNe7P08E9J6RpcBPeaPyCiY883lfVJx4OmKSmikfCDzw2M-QrgsEYM0V9lPtEJbeX-JzwWCLrFNY3CgCAozDgcXOZWL7VwaHn7g"]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3" />
+      </If.Else>
+    </If>
+    <ui:InputDialog Label="{x:Null}" Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="510,246" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Title="Enter token value">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[GetFolderToken]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[GetFolderToken]" />
+    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" BodyFormat="application/JSON" DisplayName="GetFolders" EnableSSLVerification="True" EndPoint="https://laptop-2ueu0kdi/odata/Folders" sap:VirtualizedContainerService.HintSize="200,25.33333333333333" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" OAuth2Token="[GetFolderToken]" Result="[GetFoldersResponseContent]" StatusCode="[GetFolderResponseCode]" TimeoutMS="6000">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Body>
+        <InArgument x:TypeArguments="x:String" />
+      </ui:HttpClient.Body>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:HttpClient>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[GetFolderResponseCode.ToString]" />
+  </Sequence>
+</Activity>
