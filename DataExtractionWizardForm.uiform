@@ -1,0 +1,62 @@
+﻿{
+  "Metadata": {
+    "Id": "7e2fcd4d-f574-4f33-9ac4-ada898bb51a7",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "DataExtractionWizardForm",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "components": [
+          {
+            "label": "Extract using SQL",
+            "key": "tab1",
+            "components": [
+              {
+                "label": "Provide SQL connection string",
+                "description": "To be provide without double quotes",
+                "tooltip": "Data Source=<InstanceName>;Initial Catalog=<DatabaseName>;Persist Security Info=True;User ID=<userid>;Password=<Password>;Encrypt=False",
+                "tableView": true,
+                "key": "provideSqlConnectionString",
+                "type": "textfield",
+                "input": true,
+                "defaultValue": "Data Source=<InstanceName>;Initial Catalog=<DatabaseName>;Persist Security Info=True;User ID=<userid>;Password=<Password>;Encrypt=False"
+              }
+            ]
+          },
+          {
+            "label": "Extract using APIs",
+            "key": "extractUsingApIs",
+            "components": []
+          },
+          {
+            "label": "Upload CSV manually",
+            "key": "uploadCsvManually",
+            "components": []
+          }
+        ],
+        "key": "tabs",
+        "type": "tabs",
+        "input": false,
+        "tableView": false,
+        "label": "Tabs"
+      },
+      {
+        "label": "Extract_Utilization_Data",
+        "showValidations": false,
+        "disableOnInvalid": true,
+        "tableView": false,
+        "key": "submit",
+        "type": "button",
+        "input": true,
+        "saveOnEnter": false
+      }
+    ]
+  }
+}
