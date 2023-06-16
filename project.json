@@ -10,10 +10,8 @@
     "UiPath.Mail.Activities": "[1.20.0]",
     "UiPath.Studio.Forms.Runtime": "[23.4.4]",
     "UiPath.System.Activities": "[23.4.3]",
-    "UiPath.Testing.Activities": "[23.4.1]",
     "UiPath.UIAutomation.Activities": "[23.4.6]",
-    "UiPath.WebAPI.Activities": "[1.9.2]",
-    "UiPath.WebAPI.Runtime": "[1.16.2]"
+    "UiPath.WebAPI.Activities": "[1.13.3]"
   },
   "webServices": [],
   "entitiesStores": [],

@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>854,1337.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1150,1134</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetToken_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -33,6 +33,10 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -82,9 +86,15 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetToken" sap:VirtualizedContainerService.HintSize="572,1272.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetToken" sap:VirtualizedContainerService.HintSize="572,1069.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strJsonResp" />
       <Variable x:TypeArguments="x:Int32" Name="strStatusCode_Authenticate" />
@@ -97,7 +107,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" Body="[string.Format(&quot;{{{0}    &quot;&quot;password&quot;&quot;: &quot;&quot;UiPath#12345&quot;&quot;,{1}    &quot;&quot;usernameOrEmailAddress&quot;&quot;: &quot;&quot;admin&quot;&quot;,{2}    &quot;&quot;tenancyName&quot;&quot;: &quot;&quot;demo&quot;&quot;   {3}}}&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]" BodyFormat="application/JSON" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://laptop-2ueu0kdi/api/Account/Authenticate" sap:VirtualizedContainerService.HintSize="510,196.66666666666666" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[AuthResponseContent]" StatusCode="[AuthResponseCode]" TimeoutMS="6000">
+    <ui:HttpClient AcceptFormat="JSON" AuthenticationType="None" Body="[string.Format(&quot;{{{0}    &quot;&quot;password&quot;&quot;: &quot;&quot;UiPath#12345&quot;&quot;,{1}    &quot;&quot;usernameOrEmailAddress&quot;&quot;: &quot;&quot;admin&quot;&quot;,{2}    &quot;&quot;tenancyName&quot;&quot;: &quot;&quot;demo&quot;&quot;   {3}}}&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]" BodyFormat="application/JSON" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://laptop-2ueu0kdi/api/Account/Authenticate" FileAttachments="{x:Null}" sap:VirtualizedContainerService.HintSize="510,25.333333333333332" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="[AuthResponseContent]" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="[AuthResponseCode]" TimeoutMS="6000" Username="{x:Null}">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -121,7 +131,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:HttpClient>
-    <If Condition="[AuthResponseCode = 200]" DisplayName="If Successfully Authenticated" sap:VirtualizedContainerService.HintSize="510,925.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[AuthResponseCode = 200]" DisplayName="If Successfully Authenticated" sap:VirtualizedContainerService.HintSize="510,893.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -129,7 +139,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Extract Token" sap:VirtualizedContainerService.HintSize="476,741.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Extract Token" sap:VirtualizedContainerService.HintSize="476,709.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <Sequence.Variables>
             <Variable x:TypeArguments="njl:JObject" Name="ResultObject" />
             <Variable x:TypeArguments="njl:JObject" Name="AuthresultJSON" />
@@ -149,16 +159,16 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize Json" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[AuthresultJSON]" JsonString="[AuthResponseContent]" />
+          <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize Json" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[AuthresultJSON]" JsonString="[AuthResponseContent]" />
           <Assign DisplayName="Get Access Token from the response" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[out_accessToken]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">["Bearer "+ AuthresultJSON.SelectToken("result").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[AuthresultJSON.SelectToken("result").ToString]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[out_accessToken]" />
+          <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="{x:Null}" Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[out_accessToken]" TopMost="{x:Null}" />
           <Assign DisplayName="Get Access Token from the response" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[out_accessToken]</OutArgument>
