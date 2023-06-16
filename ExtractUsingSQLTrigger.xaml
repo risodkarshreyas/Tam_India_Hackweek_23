@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>508.66666666666674,807.3333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>734.6666666666666,776</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractUsingSQLTrigger_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -96,8 +96,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ufa:FormTriggerActivity x:TypeArguments="ufa:FormInfoTriggerEventArgs" MessageId="{x:Null}" DisplayName="Form trigger activity" Enabled="True" Event="click.submit" FormId="7e2fcd4d-f574-4f33-9ac4-ada898bb51a7" sap:VirtualizedContainerService.HintSize="388,166" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_1" SchedulingMode="Sequential" Tag="{x:Null}" TriggerId="20f3cf59-04e5-42ee-a6ab-dd189aa792b5" />
-    <ufa:GetFormFieldsActivity DisplayName="Get Form Values" FormId="7e2fcd4d-f574-4f33-9ac4-ada898bb51a7" sap:VirtualizedContainerService.HintSize="388,145.33333333333334" sap2010:WorkflowViewState.IdRef="GetFormFieldsActivity_1" InstanceName="[SQL_Conn_String]" Result="{x:Null}">
+    <ufa:FormTriggerActivity x:TypeArguments="ufa:FormInfoTriggerEventArgs" MessageId="{x:Null}" Tag="{x:Null}" DisplayName="Form trigger activity" Enabled="True" Event="click.submit" FormId="7e2fcd4d-f574-4f33-9ac4-ada898bb51a7" sap:VirtualizedContainerService.HintSize="388,166" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_1" SchedulingMode="Sequential" TriggerId="20f3cf59-04e5-42ee-a6ab-dd189aa792b5" />
+    <ufa:GetFormFieldsActivity DisplayName="Get Form Values" FormId="7e2fcd4d-f574-4f33-9ac4-ada898bb51a7" sap:VirtualizedContainerService.HintSize="388,145.33333333333334" sap2010:WorkflowViewState.IdRef="GetFormFieldsActivity_1" InstanceName="[SQL_Conn_String]">
       <ufa:GetFormFieldsActivity.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, OutArgument" />
       </ufa:GetFormFieldsActivity.Arguments>
@@ -127,9 +127,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Execute_Query_And_Save_UtilizationDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Execute_Query_And_Save_UtilizationDetails.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Execute_Query_And_Save_UtilizationDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Execute_Query_And_Save_UtilizationDetails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="SQL_ConnectionString_IN" />
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

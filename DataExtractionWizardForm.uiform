@@ -15,6 +15,21 @@
       {
         "components": [
           {
+            "label": "Extract using APIs",
+            "key": "extractUsingApIs",
+            "components": [
+              {
+                "label": "Extract Data Using APIs",
+                "action": "event",
+                "showValidations": false,
+                "tableView": false,
+                "key": "extractDataUsingApIs",
+                "type": "button",
+                "input": true
+              }
+            ]
+          },
+          {
             "label": "Extract using SQL",
             "key": "tab1",
             "components": [
@@ -41,24 +56,42 @@
             ]
           },
           {
-            "label": "Extract using APIs",
-            "key": "extractUsingApIs",
+            "label": "Upload CSV manually",
+            "key": "uploadCsvManually",
             "components": [
               {
-                "label": "Extract Data Using APIs",
+                "label": "Upload File",
                 "action": "event",
                 "showValidations": false,
                 "tableView": false,
-                "key": "extractDataUsingApIs",
+                "key": "UploadFile",
                 "type": "button",
+                "input": true
+              },
+              {
+                "label": "Selected File",
+                "tableView": true,
+                "key": "selectedFile",
+                "type": "textfield",
                 "input": true
               }
             ]
           },
           {
-            "label": "Upload CSV manually",
-            "key": "uploadCsvManually",
-            "components": []
+            "label": "Dynamic Allocator Process",
+            "key": "runDap",
+            "components": [
+              {
+                "label": "Execute_Dynamic_Allocator_Process_Bot",
+                "action": "event",
+                "showValidations": false,
+                "disabled": true,
+                "tableView": false,
+                "key": "executeDynamicAllocatorProcessBot",
+                "type": "button",
+                "input": true
+              }
+            ]
           }
         ],
         "key": "tabs",

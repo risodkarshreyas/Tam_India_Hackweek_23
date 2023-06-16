@@ -1,17 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Execute_Query_And_Save_UtilizationDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="SQL_Connection_String" Type="InArgument(x:String)" />
-  </x:Members>
-  <this:Execute_Query_And_Save_UtilizationDetails.SQL_Connection_String>
-    <InArgument x:TypeArguments="x:String">
-      <Literal x:TypeArguments="x:String" Value="" />
-    </InArgument>
-  </this:Execute_Query_And_Save_UtilizationDetails.SQL_Connection_String>
-  <VisualBasic.Settings>
-    <x:Null />
-  </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>857.3333333333334,2602</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>Execute_Query_And_Save_UtilizationDetails_1</sap2010:WorkflowViewState.IdRef>
+<Activity mc:Ignorable="sap sap2010" x:Class="Execute_Query_And_Save_UtilizationDetails" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="778.6666666666666,2470" sap2010:WorkflowViewState.IdRef="Execute_Query_And_Save_UtilizationDetails_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
       <x:String>System.Activities</x:String>
@@ -102,18 +89,18 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="788.6666666666666,2537.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap:VirtualizedContainerService.HintSize="788.6666666666666,2405.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="726.6666666666666,2426.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="726.6666666666666,2294.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="ui:DatabaseConnection" Name="obj_DB_Connection" />
       </TryCatch.Variables>
       <TryCatch.Try>
-        <Sequence DisplayName="Execute_Query_And_Save_UtilizationDetails" sap:VirtualizedContainerService.HintSize="688,2187.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="Execute_Query_And_Save_UtilizationDetails" sap:VirtualizedContainerService.HintSize="688,2055.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="dt_Query_Output" />
             <Variable x:TypeArguments="x:String" Default="----------- Below query gives details about all jobs through a Manually started jobs&#xA;select  T.TenancyName as Tenant_Name,OU.DisplayName as Folder_Name,&#xA;Rel.Name as Process_Name,Rel.Description as Process_Discription,--Rel.Unattended,&#xA;Rel.JobPriority,NULL as Trigger_Name,&#xA;NULL as TimeZoneId,NULL as StartProcessCron,NULL as StartProcessCronDetails,&#xA;NULL as LastSuccessfulTime,NULL as Enabled,NULL as QueueDefinitionId&#xA;--,J.RobotId&#xA;,R.Name as Robot_Name&#xA;--,j.MachineId&#xA;,M.Name as Machine_Name&#xA;,J.HostMachineName&#xA;,j.JobPriority,j.Type,j.RuntimeType&#xA;,count(j.Id) as Number_Of_Jobs_Executed&#xA;,AVG( DATEDIFF(Second, J.StartTime, J.EndTime)) as Average_AHT_Seconds&#xA;,MAX( DATEDIFF(Second, J.StartTime, J.EndTime)) as Max_execution_Time_Seconds&#xA;from dbo.Tenants T &#xA;inner join dbo.OrganizationUnits OU on T.Id = OU.TenantId&#xA;inner join dbo.MachineOrganizationUnits MOU on OU.Id = MOU.OrganizationUnitId&#xA;inner join dbo.Machines M on M.ID = MOU.MachineId&#xA;inner join dbo.Jobs J on J.MachineId = M.Id&#xA;inner join dbo.Releases Rel on J.ReleaseId = Rel.Id&#xA;inner join dbo.Robots R on R.Id = J.RobotId&#xA;where J.StartingScheduleId is NULL&#xA;group by &#xA; T.TenancyName,OU.DisplayName ,&#xA;Rel.Name,Rel.Description,--Rel.Unattended,&#xA;Rel.JobPriority,&#xA;--j.MachineId,&#xA;--J.RobotId,&#xA;R.Name,&#xA;M.Name,J.HostMachineName,&#xA;j.JobPriority,j.Type,j.RuntimeType&#xA;Order by&#xA;T.TenancyName,OU.DisplayName&#xA;&#xA;-- Job type enum [ Unattended, Attended, ServerlessGeneric ]&#xA;-- runtime Enum: [ NonProduction, Attended, Unattended, Development, Studio, RpaDeveloper, StudioX, CitizenDeveloper, Headless, RpaDeveloperPro, StudioPro, TestAutomation, AutomationCloud, Serverless, AutomationKit, ServerlessTestAutomation, AutomationCloudTestAutomation, AttendedStudioWeb ]&#xA;-- Job priority enum [ Low, Normal, High ]&#xA;&#xA;--select * from dbo.ProcessSchedules&#xA;&#xA;--select * from dbo.Jobs order by StartTime desc&#xA;--select * from dbo.Releases" Name="str_TenantWiseUtilization_SQL" />
@@ -124,7 +111,6 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="626,92" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[SQL_Connection_String]" />
           <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="626,246" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="- Please specify connection string from your Orchestrator Web config. &#xA;&#xA;- DO NOT include the double quotes&#xA;&#xA;- E.g. Data Source=&lt;InstanceName&gt;;Initial Catalog=&lt;DatabaseName&gt;;Persist Security Info=True;User ID=&lt;userid&gt;;Password=&lt;Password&gt;;Encrypt=False" Title="Please specify connection string from your Orchestrator Web config.  DO NOT include the double quotes.">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[str_DB_ConnectionString]</OutArgument>
@@ -132,7 +118,7 @@
           </ui:InputDialog>
           <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="626,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="[str_DB_ConnectionString]" DatabaseConnection="[Obj_DB_Connection]" />
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="626,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Connection to database established&quot;]" />
-          <ui:ReadTextFile File="{x:Null}" Content="[str_TenantWiseUtilization_SQL]" DisplayName="Read Text File" FileName="C:\Users\Public\Documents\TenantWiseUtilization.sql" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+          <ui:ReadTextFile File="{x:Null}" Content="[str_TenantWiseUtilization_SQL]" DisplayName="Read Text File" FileName=".data\Tenant_Utilization_Data.xlsx" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
           <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dt_Query_Output]" DisplayName="Run query" ExistingDbConnection="[Obj_DB_Connection]" sap:VirtualizedContainerService.HintSize="626,88.66666666666667" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[str_TenantWiseUtilization_SQL]">
             <ui:ExecuteQuery.Parameters>
               <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -182,7 +168,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454.6666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="692.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
