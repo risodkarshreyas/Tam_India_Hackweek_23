@@ -111,8 +111,24 @@
                 "type": "label"
               },
               {
-                "content": "Click on the button below to continue",
+                "content": "To connect to your own cloud Orchestrator, please update refresh token at this path:\n.\\Authorize\\API_Token - Hackweek23 - TAM India cloud.txt\n",
                 "key": "label13",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "content": " ",
+                "key": "label19",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "content": "Click on the button below to continue",
+                "key": "label20",
                 "input": false,
                 "tableView": false,
                 "label": "Label",
