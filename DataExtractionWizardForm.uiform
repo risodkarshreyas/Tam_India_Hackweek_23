@@ -17,6 +17,80 @@
       {
         "components": [
           {
+            "label": "Upload CSV file",
+            "key": "uploadCsvManually",
+            "components": [
+              {
+                "key": "label5",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "tag": "h4",
+                "content": "\nThis option Allows SME to manually upload the current utilization data",
+                "key": "label4",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "content": "To download the CSV template file click below button:\nThe template CSV file will be generated in your downloads folderon.",
+                "key": "label18",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "label": "download CSV template",
+                "action": "event",
+                "showValidations": false,
+                "tableView": false,
+                "key": "toDownloadTemplateClickHere",
+                "type": "button",
+                "input": true
+              },
+              {
+                "content": "\nThe template CSV file will be generated in your downloads folder",
+                "key": "label9",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "label": "Upload CSV File*",
+                "action": "event",
+                "showValidations": false,
+                "tableView": false,
+                "key": "UploadFile",
+                "type": "button",
+                "input": true
+              },
+              {
+                "label": "Selected File",
+                "tableView": true,
+                "validate": {
+                  "required": true
+                },
+                "key": "selectedFile",
+                "type": "textfield",
+                "input": true
+              },
+              {
+                "content": "\n*upon uploading the file, you can go to optimize allocation tab to run the next step  ",
+                "key": "label6",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              }
+            ]
+          },
+          {
             "label": "Extract via APIs",
             "key": "extractUsingApIs",
             "components": [
@@ -141,80 +215,6 @@
               {
                 "content": "\n*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
                 "key": "label7",
-                "input": false,
-                "tableView": false,
-                "label": "Label",
-                "type": "label"
-              }
-            ]
-          },
-          {
-            "label": "Upload CSV file",
-            "key": "uploadCsvManually",
-            "components": [
-              {
-                "key": "label5",
-                "input": false,
-                "tableView": false,
-                "label": "Label",
-                "type": "label"
-              },
-              {
-                "tag": "h4",
-                "content": "\nThis option Allows SME to manually upload the current utilization data",
-                "key": "label4",
-                "input": false,
-                "tableView": false,
-                "label": "Label",
-                "type": "label"
-              },
-              {
-                "content": "To download the CSV template file click below button:\nThe template CSV file will be generated in your downloads folderon.",
-                "key": "label18",
-                "input": false,
-                "tableView": false,
-                "label": "Label",
-                "type": "label"
-              },
-              {
-                "label": "download CSV template",
-                "action": "event",
-                "showValidations": false,
-                "tableView": false,
-                "key": "toDownloadTemplateClickHere",
-                "type": "button",
-                "input": true
-              },
-              {
-                "content": "\nThe template CSV file will be generated in your downloads folder",
-                "key": "label9",
-                "input": false,
-                "tableView": false,
-                "label": "Label",
-                "type": "label"
-              },
-              {
-                "label": "Upload CSV File*",
-                "action": "event",
-                "showValidations": false,
-                "tableView": false,
-                "key": "UploadFile",
-                "type": "button",
-                "input": true
-              },
-              {
-                "label": "Selected File",
-                "tableView": true,
-                "validate": {
-                  "required": true
-                },
-                "key": "selectedFile",
-                "type": "textfield",
-                "input": true
-              },
-              {
-                "content": "\n*upon uploading the file, you can go to optimize allocation tab to run the next step  ",
-                "key": "label6",
                 "input": false,
                 "tableView": false,
                 "label": "Label",
