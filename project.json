@@ -1,5 +1,5 @@
 {
-  "name": "TAM_India_Hackweek_Workflow_Windows",
+  "name": "TAM_India_Hackweek_LicenseDataExtractor",
   "description": "TAM_India_Hackweek_Workflow - end to end workflow solution",
   "main": "Main.xaml",
   "dependencies": {
