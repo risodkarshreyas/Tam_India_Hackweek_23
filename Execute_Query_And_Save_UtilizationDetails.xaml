@@ -118,7 +118,7 @@
           </ui:InputDialog>
           <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="626,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="[str_DB_ConnectionString]" DatabaseConnection="[Obj_DB_Connection]" />
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="626,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Connection to database established&quot;]" />
-          <ui:ReadTextFile File="{x:Null}" Content="[str_TenantWiseUtilization_SQL]" DisplayName="Read Text File" FileName=".data\Tenant_Utilization_Data.xlsx" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+          <ui:ReadTextFile File="{x:Null}" Content="[str_TenantWiseUtilization_SQL]" DisplayName="Read Text File" FileName="Query\TenantWiseUtilization.sql" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
           <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dt_Query_Output]" DisplayName="Run query" ExistingDbConnection="[Obj_DB_Connection]" sap:VirtualizedContainerService.HintSize="626,88.66666666666667" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[str_TenantWiseUtilization_SQL]">
             <ui:ExecuteQuery.Parameters>
               <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -137,7 +137,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,740.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath=".data\Tenant_Utilization_Data.xlsx">
+                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,740.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath=".data\Tenant_Utilization_Data_Via_SQL.xlsx">
                     <ueab:ExcelApplicationCard.Body>
                       <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                         <ActivityAction.Argument>

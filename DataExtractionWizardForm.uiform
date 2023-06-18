@@ -37,7 +37,7 @@
                 "type": "label"
               },
               {
-                "content": "To download the CSV template file click below button:\nThe template CSV file will be generated in your downloads folderon.",
+                "content": "To download the CSV template file click below button:\nThe template CSV file will be generated in your downloads folder on your machine.",
                 "key": "label18",
                 "input": false,
                 "tableView": false,
@@ -65,19 +65,10 @@
                 "label": "Upload CSV File*",
                 "action": "event",
                 "showValidations": false,
+                "tooltip": " Ensure to upload the file before proceeding with optimization",
                 "tableView": false,
                 "key": "UploadFile",
                 "type": "button",
-                "input": true
-              },
-              {
-                "label": "Selected File",
-                "tableView": true,
-                "validate": {
-                  "required": true
-                },
-                "key": "selectedFile",
-                "type": "textfield",
                 "input": true
               },
               {
@@ -173,7 +164,7 @@
                 "type": "label"
               },
               {
-                "content": "\n* This option is applicable for On Prem Orchestrator only",
+                "content": "\n* This option is applicable for UiPath cloud Orchestrator only",
                 "key": "label8",
                 "input": false,
                 "tableView": false,
@@ -181,7 +172,7 @@
                 "type": "label"
               },
               {
-                "content": "*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
+                "content": "*upon generating the file it will be saved at your data folder, you can then go to optimize allocation tab to run the next step  ",
                 "key": "label21",
                 "input": false,
                 "tableView": false,
@@ -221,7 +212,6 @@
               {
                 "label": "Extract Utilization Data using SQL",
                 "showValidations": false,
-                "disableOnInvalid": true,
                 "tableView": false,
                 "key": "submit",
                 "type": "button",
@@ -237,7 +227,7 @@
                 "type": "label"
               },
               {
-                "content": "*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
+                "content": "*This option is applicable for UiPath On Prem orchestrator only",
                 "key": "label22",
                 "input": false,
                 "tableView": false,
@@ -245,7 +235,7 @@
                 "type": "label"
               },
               {
-                "content": "\n*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
+                "content": "\n*upon generating the file it will be saved at data folder, you can then go to optimize allocation tab to run the next step  ",
                 "key": "label7",
                 "input": false,
                 "tableView": false,
@@ -295,10 +285,19 @@
                 "label": "Execute Dynamic Allocator Planner Bot",
                 "action": "event",
                 "showValidations": false,
+                "disabled": true,
                 "tableView": false,
                 "key": "executeDynamicAllocatorProcessBot",
                 "type": "button",
                 "input": true
+              },
+              {
+                "content": "\nTo trigger this bot currently, please download the solution from Part2-UiPath Orchestrator Dynamic Allocation Planner and execute",
+                "key": "label23",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
               }
             ]
           }
