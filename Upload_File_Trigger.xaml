@@ -40,6 +40,7 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.Studio.Forms.Runtime</x:String>
+      <x:String>UiPath.Platform.GlobalVariables</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -87,8 +88,8 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ufa:FormTriggerActivity x:TypeArguments="ufa:FormInfoTriggerEventArgs" MessageId="{x:Null}" Tag="{x:Null}" DisplayName="Form trigger activity" Enabled="True" Event="click.UploadFile" FormId="7e2fcd4d-f574-4f33-9ac4-ada898bb51a7" sap:VirtualizedContainerService.HintSize="388,166" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_1" SchedulingMode="Sequential" TriggerId="c85b7bee-abec-45f9-9488-0d183c6b98cd" />
-    <ui:SelectFile DisplayName="Browse For File" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="388,141.33333333333334" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[StrPath]" />
-    <ufa:SetFormFieldsActivity InstanceName="{x:Null}" DisplayName="Set Form Values" FormId="7e2fcd4d-f574-4f33-9ac4-ada898bb51a7" sap:VirtualizedContainerService.HintSize="388,145.33333333333334" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_1">
+    <ui:SelectFile DisplayName="Browse For File" Filter="CSV|*.csv" sap:VirtualizedContainerService.HintSize="388,141.33333333333334" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[StrPath]" />
+    <ufa:SetFormFieldsActivity InstanceName="{x:Null}" DisplayName="Set Form Values" FormId="7e2fcd4d-f574-4f33-9ac4-ada898bb51a7" sap:VirtualizedContainerService.HintSize="334,145.33333333333334" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_1">
       <ufa:SetFormFieldsActivity.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument" />
       </ufa:SetFormFieldsActivity.Arguments>

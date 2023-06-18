@@ -9,7 +9,7 @@
     "Height": 700,
     "Theme": "Sandstone",
     "ShowInTaskbar": true,
-    "ShowMargin": true,
+    "ShowMargin": false,
     "CustomStyle": ""
   },
   "Data": {
@@ -29,7 +29,7 @@
               },
               {
                 "tag": "h4",
-                "content": "\nThis option Allows you to extract the current utilization data using Orchestrator APIs\n\nClick on the button below to continue",
+                "content": "\nThis option Allows you to extract the current utilization data using Orchestrator APIs",
                 "key": "label",
                 "input": false,
                 "tableView": false,
@@ -37,7 +37,15 @@
                 "type": "label"
               },
               {
-                "label": "Extract Data Using APIs",
+                "content": "Click on the button below to continue",
+                "key": "label13",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "label": "Extract Utilization Data Using APIs",
                 "action": "event",
                 "showValidations": false,
                 "tableView": false,
@@ -65,6 +73,14 @@
                 ],
                 "type": "button",
                 "input": true
+              },
+              {
+                "content": " ",
+                "key": "label14",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
               },
               {
                 "content": "\n*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
@@ -97,24 +113,30 @@
                 "type": "label"
               },
               {
-                "label": "Provide SQL connection string",
-                "description": "To be provide without double quotes",
-                "tooltip": "Data Source=<InstanceName>;Initial Catalog=<DatabaseName>;Persist Security Info=True;User ID=<userid>;Password=<Password>;Encrypt=False",
-                "tableView": true,
-                "key": "provideSqlConnectionString",
-                "type": "textfield",
-                "input": true,
-                "defaultValue": "Data Source=<InstanceName>;Initial Catalog=<DatabaseName>;Persist Security Info=True;User ID=<userid>;Password=<Password>;Encrypt=False"
+                "content": " Click on the button below to continue",
+                "key": "label15",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
               },
               {
-                "label": "Extract_Utilization_Data",
+                "label": "Extract Utilization Data using SQL",
                 "showValidations": false,
                 "disableOnInvalid": true,
                 "tableView": false,
                 "key": "submit",
                 "type": "button",
-                "input": true,
-                "saveOnEnter": false
+                "saveOnEnter": true,
+                "input": true
+              },
+              {
+                "content": " ",
+                "key": "label16",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
               },
               {
                 "content": "\n*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
@@ -147,7 +169,15 @@
                 "type": "label"
               },
               {
-                "label": "To download CSV template click here",
+                "content": "To download the CSV template file click below button:\nThe template CSV file will be generated in your downloads folderon.",
+                "key": "label18",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "label": "download CSV template",
                 "action": "event",
                 "showValidations": false,
                 "tableView": false,
@@ -164,7 +194,7 @@
                 "type": "label"
               },
               {
-                "label": "Upload CSV File",
+                "label": "Upload CSV File*",
                 "action": "event",
                 "showValidations": false,
                 "tableView": false,
@@ -175,6 +205,9 @@
               {
                 "label": "Selected File",
                 "tableView": true,
+                "validate": {
+                  "required": true
+                },
                 "key": "selectedFile",
                 "type": "textfield",
                 "input": true
@@ -213,6 +246,14 @@
               {
                 "content": "\nClick on the below button to continue:",
                 "key": "label12",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "content": " ",
+                "key": "label17",
                 "input": false,
                 "tableView": false,
                 "label": "Label",
