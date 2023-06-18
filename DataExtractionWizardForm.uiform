@@ -5,7 +5,9 @@
   },
   "DesignProperties": {
     "Title": "DataExtractionWizardForm",
-    "Theme": "Default",
+    "Width": 1200,
+    "Height": 700,
+    "Theme": "Sandstone",
     "ShowInTaskbar": true,
     "ShowMargin": true,
     "CustomStyle": ""
@@ -65,7 +67,7 @@
                 "input": true
               },
               {
-                "content": "\n*upon uploading the file, you can go to optimize tab to run the next step  ",
+                "content": "\n*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
                 "key": "label8",
                 "input": false,
                 "tableView": false,
@@ -115,7 +117,7 @@
                 "saveOnEnter": false
               },
               {
-                "content": "\n*upon uploading the file, you can go to optimize tab to run the next step  ",
+                "content": "\n*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
                 "key": "label7",
                 "input": false,
                 "tableView": false,
@@ -145,7 +147,7 @@
                 "type": "label"
               },
               {
-                "label": "To download template click here",
+                "label": "To download CSV template click here",
                 "action": "event",
                 "showValidations": false,
                 "tableView": false,
@@ -154,7 +156,15 @@
                 "input": true
               },
               {
-                "label": "Upload File",
+                "content": "\nThe template CSV file will be generated in your downloads folder",
+                "key": "label9",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "label": "Upload CSV File",
                 "action": "event",
                 "showValidations": false,
                 "tableView": false,
@@ -170,7 +180,7 @@
                 "input": true
               },
               {
-                "content": "\n*upon uploading the file, you can go to optimize tab to run the next step  ",
+                "content": "\n*upon uploading the file, you can go to optimize allocation tab to run the next step  ",
                 "key": "label6",
                 "input": false,
                 "tableView": false,
@@ -184,10 +194,34 @@
             "key": "runDap",
             "components": [
               {
+                "tag": "h4",
+                "content": "\nThis option Allows you to run the optimizer bot.\n",
+                "key": "label10",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "content": "\nThe Optimizer bot will scan your current schedule which is either uploaded manually or extracted via API/SQL in previous tabs.\nIt will recommend you optimized schedule and also give you a percentage utilziation improvement in a excel dashboard allowing you to visulaize benifits.",
+                "key": "label11",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "content": "\nClick on the below button to continue:",
+                "key": "label12",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
                 "label": "Execute_Dynamic_Allocator_Process_Bot",
                 "action": "event",
                 "showValidations": false,
-                "disabled": true,
                 "tableView": false,
                 "key": "executeDynamicAllocatorProcessBot",
                 "type": "button",
