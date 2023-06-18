@@ -9,7 +9,7 @@
     "Height": 700,
     "Theme": "Sandstone",
     "ShowInTaskbar": true,
-    "ShowMargin": false,
+    "ShowMargin": true,
     "CustomStyle": ""
   },
   "Data": {
@@ -173,8 +173,16 @@
                 "type": "label"
               },
               {
-                "content": "\n*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
+                "content": "\n* This option is applicable for On Prem Orchestrator only",
                 "key": "label8",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "content": "*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
+                "key": "label21",
                 "input": false,
                 "tableView": false,
                 "label": "Label",
@@ -229,6 +237,14 @@
                 "type": "label"
               },
               {
+                "content": "*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
+                "key": "label22",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
                 "content": "\n*upon generating the file it will be saved at your downloads folder, you can then go to optimize allocation tab to run the next step  ",
                 "key": "label7",
                 "input": false,
@@ -244,7 +260,7 @@
             "components": [
               {
                 "tag": "h4",
-                "content": "\nThis option Allows you to run the optimizer bot.\n",
+                "content": "\nThis option Allows you to run the optimizer by triggering the dynamic allocation planner robot.\n",
                 "key": "label10",
                 "input": false,
                 "tableView": false,
@@ -252,7 +268,7 @@
                 "type": "label"
               },
               {
-                "content": "\nThe Optimizer bot will scan your current schedule which is either uploaded manually or extracted via API/SQL in previous tabs.\nIt will recommend you optimized schedule and also give you a percentage utilziation improvement in a excel dashboard allowing you to visulaize benifits.",
+                "content": "\nThe dynamic allocation planner bot will scan your current schedule which is either uploaded manually or extracted via API/SQL in previous tabs.\nIt will recommend you optimized schedule and also give you a percentage utilziation improvement in a excel dashboard allowing you to visulaize benifits.",
                 "key": "label11",
                 "input": false,
                 "tableView": false,
@@ -276,7 +292,7 @@
                 "type": "label"
               },
               {
-                "label": "Execute_Dynamic_Allocator_Process_Bot",
+                "label": "Execute Dynamic Allocator Planner Bot",
                 "action": "event",
                 "showValidations": false,
                 "tableView": false,

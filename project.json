@@ -1,5 +1,5 @@
 {
-  "name": "TAM_India_Hackweek_LicenseDataExtractor",
+  "name": "UiPath_OrchestratorDataExtractor",
   "description": "TAM_India_Hackweek_Workflow - end to end workflow solution",
   "main": "Main.xaml",
   "dependencies": {
