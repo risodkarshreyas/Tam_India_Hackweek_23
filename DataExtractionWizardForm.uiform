@@ -15,24 +15,85 @@
       {
         "components": [
           {
-            "label": "Extract using APIs",
+            "label": "Extract via APIs",
             "key": "extractUsingApIs",
             "components": [
+              {
+                "key": "label1",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "tag": "h4",
+                "content": "\nThis option Allows you to extract the current utilization data using Orchestrator APIs\n\nClick on the button below to continue",
+                "key": "label",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
               {
                 "label": "Extract Data Using APIs",
                 "action": "event",
                 "showValidations": false,
                 "tableView": false,
                 "key": "extractDataUsingApIs",
+                "logic": [
+                  {
+                    "name": "Disable_on_Click",
+                    "trigger": {
+                      "type": "event",
+                      "event": "On_Click"
+                    },
+                    "actions": [
+                      {
+                        "name": "Disable_on_click",
+                        "type": "property",
+                        "property": {
+                          "label": "Disabled",
+                          "value": "disabled",
+                          "type": "boolean"
+                        },
+                        "state": true
+                      }
+                    ]
+                  }
+                ],
                 "type": "button",
                 "input": true
+              },
+              {
+                "content": "\n*upon uploading the file, you can go to optimize tab to run the next step  ",
+                "key": "label8",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
               }
             ]
           },
           {
-            "label": "Extract using SQL",
+            "label": "Extract via SQL",
             "key": "tab1",
             "components": [
+              {
+                "key": "label3",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "tag": "h4",
+                "content": "\nThis option Allows you to extract the current utilization data using SQL Query to be executed on UiPath Orchestrator Database  ",
+                "key": "label2",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
               {
                 "label": "Provide SQL connection string",
                 "description": "To be provide without double quotes",
@@ -52,13 +113,46 @@
                 "type": "button",
                 "input": true,
                 "saveOnEnter": false
+              },
+              {
+                "content": "\n*upon uploading the file, you can go to optimize tab to run the next step  ",
+                "key": "label7",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
               }
             ]
           },
           {
-            "label": "Upload CSV manually",
+            "label": "Upload CSV file",
             "key": "uploadCsvManually",
             "components": [
+              {
+                "key": "label5",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "tag": "h4",
+                "content": "\nThis option Allows SME to manually upload the current utilization data",
+                "key": "label4",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
+              },
+              {
+                "label": "To download template click here",
+                "action": "event",
+                "showValidations": false,
+                "tableView": false,
+                "key": "toDownloadTemplateClickHere",
+                "type": "button",
+                "input": true
+              },
               {
                 "label": "Upload File",
                 "action": "event",
@@ -74,11 +168,19 @@
                 "key": "selectedFile",
                 "type": "textfield",
                 "input": true
+              },
+              {
+                "content": "\n*upon uploading the file, you can go to optimize tab to run the next step  ",
+                "key": "label6",
+                "input": false,
+                "tableView": false,
+                "label": "Label",
+                "type": "label"
               }
             ]
           },
           {
-            "label": "Dynamic Allocator Process",
+            "label": "Optimize allocation",
             "key": "runDap",
             "components": [
               {
